@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh"> 
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>图片鉴赏</title> 
+    <link rel="stylesheet" href="css/gallery.css"> 
+</head>
+<body>
+    <header>
+        <div class="logo">图片鉴赏</div> 
+        <nav>
+            <ul>
+                <li><a href="index.html">首页</a></li> 
+                <li><a href="story.html">剧情简介</a></li> 
+                <li><a href="characters.html">角色介绍</a></li> 
+                <li><a href="music.html">音乐插曲</a></li> 
+                <li><a href="gallery.html">图片鉴赏</a></li> 
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="gallery-container"> <!-- 图片画廊的容器 -->
+        </div>
+    </main>
+    
+     <!-- <footer>
+        <p>&copy; 2024 图片鉴赏. 版权所有.</p> 页脚版权信息 
+    </footer>  -->
+
+    <!-- 图片弹出框 -->
+    <div id="imageModal" class="modal"> <!-- 弹出框容器 -->
+        <span class="close" onclick="closeModal()">&times;</span> <!-- 关闭按钮 -->
+        <img class="modal-content" id="modalImage"> <!-- 弹出显示的图片 -->
+        <div id="caption"></div> <!-- 图片说明文字 -->
+        <a id="downloadLink" download>下载图片</a> <!-- 下载图片的链接 -->
+    </div>
+    <script src="js/gallery.js"></script> <!-- 引入外部 JavaScript 文件 -->
+</body>
+</html>
+
+

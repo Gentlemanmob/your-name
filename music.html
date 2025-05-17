@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音乐播放器</title>
+    <link rel="stylesheet" href="css/music.css">
+</head>
+<body>
+    <header>
+        <div class="logo">音乐播放器</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="story.html">剧情简介</a></li>
+                <li><a href="characters.html">角色介绍</a></li>
+                <li><a href="music.html">音乐插曲</a></li>
+                <li><a href="gallery.html">图片鉴赏</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- 音乐播放器组件 -->
+        <div class="player">
+            <!-- 专辑封面区域 -->
+            <div class="album-cover">
+                <img id="cover" src="image/s1.jpg" alt="封面图片">
+                <!-- 
+                    专辑封面的图片：
+                    - 使用图片ID: cover，方便在JS中动态修改。
+                    - 图片路径为image目录下的s1.jpg。
+                -->
+            </div>
+            <!-- 歌曲详细信息 -->
+            <div class="details">
+                <h2 id="song-title">歌曲名称</h2>
+                <!-- 显示歌曲名称，使用ID: song-title便于JS动态更新 -->
+                <p id="song-artist">歌手名</p>
+                <!-- 显示歌手名，使用ID: song-artist便于JS动态更新 -->
+                <p>作词: <span id="lyricist">作词人</span></p>
+                <!-- 显示作词者，使用ID: lyricist便于JS动态更新 -->
+                <p>作曲: <span id="composer">作曲人</span></p>
+                <!-- 显示作曲者，使用ID: composer便于JS动态更新 -->
+                <!-- 播放进度条 -->
+                <div class="progress">
+                    <input type="range" id="progress-bar" value="0" max="100" step="0.1" style="width: 100%;">
+                    <!-- 
+                        播放进度条：
+                        - 使用input元素实现范围滑动条。
+                        - ID: progress-bar便于JS控制和更新。
+                        - 初始值为0，最大值为100，表示百分比。
+                    -->
+                </div>
+                <!-- 播放器控制按钮 -->
+                <div class="controls">
+                    <button onclick="prevSong()">上一曲</button>
+                    <!-- 
+                        上一曲按钮：
+                        - 点击时调用JS函数prevSong()。
+                    -->
+                    <button id="play-pause-btn" onclick="playPause()">播放</button>
+                    <!-- 
+                        播放/暂停按钮：
+                        - 使用ID: play-pause-btn便于在JS中动态修改文本。
+                        - 点击时调用JS函数playPause()。
+                    -->
+                    <button onclick="nextSong()">下一曲</button>
+                    <!-- 
+                        下一曲按钮：
+                        - 点击时调用JS函数nextSong()。
+                    -->
+                </div>
+            </div>
+        </div>
+        <!-- 歌词显示区域 -->
+        <div class="lyrics-container">
+            <div class="lyrics" id="lyrics">
+                <!-- 
+                    歌词将通过JS动态插入。
+                    使用ID: lyrics便于在JS中更新歌词内容。
+                -->
+            </div>
+        </div>
+        <!-- 音频元素 -->
+        <audio id="audio"></audio>
+        <!-- 
+            使用audio元素播放音乐。
+            - 使用ID: audio便于JS进行控制（如播放、暂停、进度调整等）。
+        -->
+    </main>
+    <!-- <footer>
+        <p>&copy; 2024 音乐播放器. 版权所有.</p>
+    </footer> -->
+    <script src="js/music.js"></script>
+</body>
+</html>
+
+
+

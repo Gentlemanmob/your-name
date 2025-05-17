@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif; /* 设置全局字体为 Arial，如果不可用则使用 sans-serif */
+    margin: 0; /* 清除默认的外边距 */
+    padding: 0; /* 清除默认的内边距 */
+    background-color: #f7f7f7; /* 设置背景颜色为浅灰色 */
+    color: #333; /* 设置文本颜色为深灰色 */
+}
+
+header {
+    background: linear-gradient(135deg, #4CAF50, #388E3C); /* 应用绿色渐变背景，45度角 */
+    color: #fff; /* 设置文本颜色为白色 */
+    padding: 1rem 0; /* 上下内边距为1rem，左右为0 */
+    text-align: center; /* 让文字在水平居中 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加微小的阴影效果，使得页眉有浮起来的效果 */
+}
+
+.logo {
+    font-size: 1.5rem; /* 设置 logo 的字体大小 */
+    margin-bottom: 10px; /* 下方间距为10像素 */
+}
+
+nav ul {
+    list-style: none; /* 移除默认的列表样式 */
+    padding: 0; /* 去掉内边距 */
+    display: flex; /* 使用 Flexbox 布局 */
+    justify-content: center; /* 水平居中对齐 */
+}
+
+nav ul li {
+    margin: 0 15px; /* 左右间距为15像素 */
+}
+
+nav ul li a {
+    color: #fff; /* 设置链接颜色为白色 */
+    text-decoration: none; /* 移除默认的下划线 */
+    font-size: 1rem; /* 设置字体大小 */
+}
+
+main {
+    padding: 20px; /* 四周内边距为20像素 */
+    max-width: 1200px; /* 设置主内容的最大宽度 */
+    margin: 20px auto; /* 上下外边距为20像素，左右居中对齐 */
+    text-align: center; /* 文字居中对齐 */
+}
+
+.carousel {
+    padding: 20px 0; /* 上下内边距为20像素 */
+}
+
+.carousel-track {
+    display: flex; /* 使用 Flexbox 布局来排列图片 */
+    gap: 20px; /* 图片之间的间距为20像素 */
+    transition: transform 0.3s ease-in-out; /* 设置动画过渡效果，切换图片时平滑过渡 */
+}
+
+.carousel img {
+    width: 120px; /* 设置图片宽度 */
+    height: 120px; /* 设置图片高度 */
+    transition: transform 0.3s; /* 设置缩放动画 */
+    cursor: pointer; /* 鼠标悬停时显示为手型光标 */
+    border-radius: 50%; /* 设置图片为圆形 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 添加阴影效果 */
+}
+
+.carousel img:hover {
+    transform: scale(1.2); /* 鼠标悬停时，图片放大 1.2 倍 */
+}
+
+.character-info {
+    margin-top: 30px; /* 上方间距为30像素 */
+    background-color: #fff; /* 背景颜色为白色 */
+    padding: 20px; /* 内边距为20像素 */
+    border-radius: 10px; /* 圆角边框 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加轻微的阴影效果 */
+    max-width: 800px; /* 设置最大宽度 */
+    margin: 30px auto; /* 上下外边距为30像素，左右居中对齐 */
+    text-align: left; /* 文本左对齐 */
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+

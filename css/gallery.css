@@ -1,0 +1,142 @@
+body {
+    font-family: Arial, sans-serif; /* 设置字体 */
+    margin: 0; /* 清除默认外边距 */
+    padding: 0; /* 清除默认内边距 */
+    background-color: #f4f4f4; /* 背景颜色 */
+}
+
+header {
+    background-color: #0AA4FE; /* 头部背景色 */
+    color: white; /* 文字颜色 */
+    padding: 1rem; /* 内边距 */
+    text-align: center; /* 文字居中 */
+}
+
+header .logo {
+    font-size: 1.5rem; /* 字体大小 */
+    margin: 0; /* 清除外边距 */
+}
+
+nav ul {
+    list-style: none; /* 去掉列表样式 */
+    padding: 0; /* 清除内边距 */
+    margin: 0; /* 清除外边距 */
+    display: flex; /* 使用 Flexbox 布局 */
+    justify-content: center; /* 水平居中 */
+    gap: 1rem; /* 间距 */
+}
+
+nav ul li {
+    display: inline; /* 行内显示 */
+}
+
+nav ul li a {
+    color: white; /* 链接颜色 */
+    text-decoration: none; /* 去掉下划线 */
+}
+
+
+main {
+    padding: 2rem; /* 主体内边距 */
+}
+
+.gallery-container {
+    display: grid; /* 使用网格布局 */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* 自适应列数 */
+    gap: 1rem; /* 网格间距 */
+}
+
+.gallery-item {
+    overflow: hidden; /* 隐藏超出部分 */
+    border: 2px solid #ddd; /* 边框 */
+    border-radius: 10px; /* 圆角 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 阴影 */
+}
+
+.gallery-item img {
+    width: 100%; /* 图片宽度 */
+    height: 100%; /* 图片高度 */
+    object-fit: cover; /* 裁剪图片 */
+    transition: transform 0.3s ease; /* 动画过渡效果 */
+}
+
+.gallery-item img:hover {
+    transform: scale(1.1); /* 放大效果 */
+}
+
+footer {
+    background-color: #0AA4FE; /* 页脚背景色 */
+    color: white; /* 文字颜色 */
+    text-align: center; /* 文字居中 */
+    padding: 1rem; /* 内边距 */
+    position: fixed; /* 固定位置 */
+    bottom: 0; /* 底部对齐 */
+    width: 100%; /* 占满宽度 */
+}
+
+/* Modal 样式 */
+.modal {
+    display: none; /* 初始隐藏 */
+    position: fixed; /* 固定定位 */
+    z-index: 1; /* 层级 */
+    padding-top: 60px; /* 顶部内边距 */
+    left: 0; /* 左边对齐 */
+    top: 0; /* 顶部对齐 */
+    width: 100%; /* 占满宽度 */
+    height: 100%; /* 占满高度 */
+    overflow: auto; /* 自动溢出 */
+    background-color: rgba(0, 0, 0, 0.9); /* 半透明背景色 */
+}
+
+.modal-content {
+    margin: auto; /* 自动水平外边距 */
+    display: block; /* 块级显示 */
+    width: 80%; /* 宽度 */
+    max-width: 700px; /* 最大宽度 */
+}
+
+#caption {
+    margin: auto; /* 自动水平外边距 */
+    display: block; /* 块级显示 */
+    width: 80%; /* 宽度 */
+    max-width: 700px; /* 最大宽度 */
+    text-align: center; /* 居中对齐 */
+    color: #ccc; /* 字体颜色 */
+    padding: 10px 0; /* 上下内边距 */
+}
+
+.modal-content, #caption {
+    animation-name: zoom; /* 动画名称 */
+    animation-duration: 0.6s; /* 动画时长 */
+}
+
+@keyframes zoom {
+    from {transform: scale(0);} /* 初始缩放 */
+    to {transform: scale(1);} /* 结束缩放 */
+}
+
+.close {
+    position: absolute; /* 绝对定位 */
+    top: 15px; /* 顶部距离 */
+    right: 35px; /* 右侧距离 */
+    color: #f1f1f1; /* 颜色 */
+    font-size: 40px; /* 字体大小 */
+    font-weight: bold; /* 字体加粗 */
+    transition: 0.3s; /* 过渡效果 */
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb; /* 鼠标悬停颜色 */
+    text-decoration: none; /* 去掉下划线 */
+    cursor: pointer; /* 鼠标指针 */
+}
+
+#downloadLink {
+    color: white; /* 链接颜色 */
+    display: block; /* 块级显示 */
+    text-align: center; /* 居中对齐 */
+    margin-top: 20px; /* 上边距 */
+    text-decoration: none; /* 去掉下划线 */
+    font-size: 1.2rem; /* 字体大小 */
+}
