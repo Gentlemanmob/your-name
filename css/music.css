@@ -56,6 +56,11 @@ main {
     height: 100%; /* 图片高度为容器高度 */
     border-radius: 50%; /* 圆形图片 */
     animation: rotate 20s linear infinite; /* 设置旋转动画 */
+    animation-play-state: paused; /* 未播放时保持静止 */
+}
+
+.album-cover img.is-playing {
+    animation-play-state: running; /* 播放时旋转，暂停后停在当前角度 */
 }
 
 @keyframes rotate {
@@ -134,4 +139,73 @@ footer {
 .lyrics p.highlight {
     color: #FF6F61; /* 高亮颜色 */
     font-weight: bold; /* 加粗 */
+}
+
+@media (max-width: 768px) {
+    main {
+        width: 100%;
+        padding: 16px 14px 28px;
+    }
+
+    .player {
+        flex-direction: column;
+        gap: 18px;
+        width: 100%;
+        min-width: 0;
+        padding: 18px 14px;
+    }
+
+    .album-cover {
+        width: min(56vw, 210px);
+        height: min(56vw, 210px);
+        flex: 0 0 auto;
+    }
+
+    .details {
+        width: 100%;
+        min-width: 0;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .details h2 {
+        margin: 0 0 8px;
+    }
+
+    .progress {
+        width: 100%;
+        margin-top: 16px;
+    }
+
+    .controls {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+        width: 100%;
+    }
+
+    .controls button {
+        width: 100%;
+        min-width: 0;
+        min-height: 44px;
+        margin: 0;
+        padding: 10px 6px;
+    }
+
+    .lyrics-container {
+        max-height: 40dvh;
+        margin-top: 16px;
+        padding: 12px 10px;
+        scroll-padding-block: 40%;
+    }
+
+    .lyrics {
+        font-size: 0.94rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .album-cover img {
+        animation: none;
+    }
 }

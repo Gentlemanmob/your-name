@@ -203,6 +203,15 @@ progressBar.addEventListener('input', () => {
     audio.currentTime = seekTime;  // 设置音频当前时间
 });
 
+// 让封面旋转状态始终与音频的实际播放状态同步
+audio.addEventListener('play', () => {
+    cover.classList.add('is-playing');
+});
+
+audio.addEventListener('pause', () => {
+    cover.classList.remove('is-playing');
+});
+
 
 audio.addEventListener('ended', () => {
     // 监听音频结束事件

@@ -87,4 +87,48 @@ footer {
     bottom: 0;
 }
 
+@media (max-width: 768px) {
+    main {
+        margin: 0 auto;
+        padding: 18px 0 32px;
+        overflow: hidden;
+    }
+
+    .carousel {
+        padding: 12px 0 18px;
+        overflow-x: auto;
+        overscroll-behavior-x: contain;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: thin;
+    }
+
+    .carousel-track {
+        width: max-content;
+        gap: 14px;
+        padding: 8px 18px 14px;
+    }
+
+    .carousel img {
+        width: 92px;
+        height: 92px;
+        flex: 0 0 auto;
+        scroll-snap-align: center;
+    }
+
+    .carousel img:hover {
+        transform: none;
+    }
+
+    .carousel img:active {
+        transform: scale(0.96);
+    }
+
+    .character-info {
+        min-height: 150px;
+        margin: 18px 14px 0;
+        padding: 18px;
+        line-height: 1.75;
+    }
+}
+
 
