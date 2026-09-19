@@ -19,6 +19,111 @@ body {
     display: none !important;
 }
 
+/* 手机方向提示 */
+#orientation-guard {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding: max(24px, env(safe-area-inset-top)) max(24px, env(safe-area-inset-right)) max(24px, env(safe-area-inset-bottom)) max(24px, env(safe-area-inset-left));
+    overflow: hidden;
+    text-align: center;
+    background:
+        radial-gradient(circle at 50% 35%, rgba(86, 137, 207, 0.3), transparent 35%),
+        linear-gradient(145deg, #070b18 0%, #121d38 52%, #261a35 100%);
+}
+
+#orientation-guard::before {
+    content: "";
+    position: absolute;
+    width: 130vw;
+    height: 1px;
+    top: 34%;
+    left: -15vw;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.32), transparent);
+    transform: rotate(-16deg);
+    box-shadow: 0 0 30px rgba(120, 177, 255, 0.28);
+}
+
+.orientation-card {
+    position: relative;
+    width: min(100%, 360px);
+    padding: 34px 26px 28px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 18px;
+    background: rgba(7, 11, 25, 0.68);
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.38);
+    backdrop-filter: blur(18px) saturate(125%);
+}
+
+.rotate-phone {
+    position: relative;
+    width: 45px;
+    height: 76px;
+    margin: 4px auto 30px;
+    border: 3px solid rgba(255, 255, 255, 0.9);
+    border-radius: 9px;
+    animation: turnLandscape 2.4s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
+
+.rotate-phone::before {
+    content: "";
+    position: absolute;
+    inset: 7px 5px 10px;
+    border-radius: 3px;
+    background: linear-gradient(145deg, rgba(100, 176, 255, 0.45), rgba(232, 133, 180, 0.32));
+}
+
+.rotate-phone span {
+    position: absolute;
+    bottom: 3px;
+    left: 50%;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #fff;
+    transform: translateX(-50%);
+}
+
+.orientation-kicker {
+    margin-bottom: 8px;
+    color: #9fc9ff;
+    font-size: 0.75rem;
+    letter-spacing: 0.28rem;
+}
+
+#orientation-title {
+    margin-bottom: 12px;
+    font-size: clamp(1.65rem, 8vw, 2.1rem);
+    font-weight: 400;
+    letter-spacing: 0.08rem;
+}
+
+#orientation-status {
+    margin-bottom: 22px;
+    color: rgba(255, 255, 255, 0.68);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+#landscape-btn {
+    width: 100%;
+    min-height: 48px;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 7px;
+    color: #fff;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+@keyframes turnLandscape {
+    0%, 18% { transform: rotate(0deg); }
+    48%, 78% { transform: rotate(90deg); }
+    100% { transform: rotate(0deg); }
+}
+
 /* 开场界面 */
 #intro-screen {
     position: fixed;
@@ -96,10 +201,71 @@ body {
     width: 100%;
     height: 100%;
     background-size: cover;
-    background-position: center;
+    background-position: var(--scene-position, center center);
     background-repeat: no-repeat;
     transition: opacity 1s ease, transform 2s ease;
     transform: scale(1);
+    overflow: hidden;
+}
+
+#scene-bg::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+        linear-gradient(180deg, rgba(5, 9, 22, 0.2) 0%, rgba(5, 9, 22, 0.03) 44%, rgba(5, 9, 22, 0.62) 100%);
+    transition: background 0.8s ease;
+}
+
+#scene-bg[data-tone="dream"]::after {
+    background:
+        radial-gradient(circle at 68% 28%, rgba(190, 164, 255, 0.18), transparent 38%),
+        linear-gradient(180deg, rgba(12, 21, 52, 0.16), rgba(12, 18, 48, 0.62));
+}
+
+#scene-bg[data-tone="playful"]::after,
+#scene-bg[data-tone="warm"]::after,
+#scene-bg[data-tone="journey"]::after {
+    background:
+        linear-gradient(180deg, rgba(40, 22, 10, 0.08) 0%, rgba(31, 17, 13, 0.08) 48%, rgba(22, 12, 14, 0.6) 100%);
+}
+
+#scene-bg[data-tone="pastoral"]::after,
+#scene-bg[data-tone="reunion"]::after {
+    background:
+        linear-gradient(180deg, rgba(13, 35, 40, 0.08) 0%, rgba(8, 17, 27, 0.04) 48%, rgba(7, 13, 27, 0.56) 100%);
+}
+
+#scene-bg[data-tone="city"]::after,
+#scene-bg[data-tone="celestial"]::after {
+    background:
+        radial-gradient(circle at 28% 18%, rgba(69, 155, 255, 0.2), transparent 36%),
+        linear-gradient(180deg, rgba(5, 20, 47, 0.1), rgba(6, 11, 31, 0.66));
+}
+
+#scene-bg[data-tone="lonely"]::after {
+    background:
+        linear-gradient(180deg, rgba(5, 14, 37, 0.38) 0%, rgba(3, 8, 23, 0.28) 42%, rgba(2, 5, 16, 0.76) 100%);
+}
+
+#scene-bg[data-tone="sacred"]::after {
+    background:
+        radial-gradient(circle at 48% 42%, rgba(116, 161, 120, 0.08), transparent 34%),
+        linear-gradient(180deg, rgba(5, 17, 23, 0.28), rgba(3, 10, 19, 0.7));
+}
+
+#scene-bg[data-tone="urgent"]::after,
+#scene-bg[data-tone="disaster"]::after {
+    background:
+        radial-gradient(circle at 50% 22%, rgba(255, 92, 68, 0.12), transparent 38%),
+        linear-gradient(180deg, rgba(31, 9, 20, 0.22), rgba(12, 5, 17, 0.74));
+}
+
+#scene-bg[data-tone="twilight"]::after {
+    background:
+        radial-gradient(circle at 50% 36%, rgba(255, 184, 107, 0.16), transparent 32%),
+        linear-gradient(180deg, rgba(52, 29, 85, 0.16), rgba(19, 9, 40, 0.66));
 }
 
 #scene-bg.fade-out {
@@ -140,12 +306,14 @@ body {
     transform: translateX(-50%);
     width: 70%;
     max-width: 900px;
-    background: rgba(0, 0, 0, 0.75);
+    background: linear-gradient(135deg, rgba(5, 9, 22, 0.82), rgba(14, 18, 35, 0.7));
     padding: 25px 35px;
     border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
     text-align: center;
     z-index: 20;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(9px) saturate(120%);
+    box-shadow: 0 18px 54px rgba(0, 0, 0, 0.24);
 }
 
 #subtitle-text {
@@ -315,6 +483,10 @@ body {
 
 /* 响应式适配 */
 @media (max-width: 768px) {
+    #scene-bg {
+        background-position: var(--scene-position-mobile, var(--scene-position, center center));
+    }
+
     #intro-screen,
     #end-screen {
         height: 100dvh;
@@ -390,7 +562,17 @@ body {
     }
 }
 
+@media (max-width: 768px) and (orientation: portrait) {
+    #orientation-guard {
+        display: flex;
+    }
+}
+
 @media (max-height: 600px) and (orientation: landscape) {
+    #scene-bg {
+        background-position: var(--scene-position-mobile, var(--scene-position, center center));
+    }
+
     #intro-screen h1 {
         margin-bottom: 8px;
         font-size: 2rem;
@@ -429,5 +611,10 @@ body {
 
     #progress-container {
         bottom: calc(10px + env(safe-area-inset-bottom));
+    }
+
+    #back-btn {
+        top: max(10px, env(safe-area-inset-top));
+        right: max(10px, env(safe-area-inset-right));
     }
 }

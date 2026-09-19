@@ -8,6 +8,17 @@
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
+    <!-- 手机竖屏提示：互动剧情按电影画幅设计，横屏体验更完整 -->
+    <div id="orientation-guard" role="dialog" aria-modal="true" aria-labelledby="orientation-title" aria-hidden="true">
+        <div class="orientation-card">
+            <div class="rotate-phone" aria-hidden="true"><span></span></div>
+            <p class="orientation-kicker">横屏放映</p>
+            <h2 id="orientation-title">请将手机横过来</h2>
+            <p id="orientation-status">画面、字幕与操作区域会在横屏下完整呈现。</p>
+            <button id="landscape-btn" type="button">尝试切换横屏</button>
+        </div>
+    </div>
+
     <!-- 开场界面 -->
     <div id="intro-screen">
         <h1>你的名字</h1>

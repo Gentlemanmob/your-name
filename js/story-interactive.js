@@ -3,7 +3,10 @@ const scenes = [
     {
         id: 1,
         title: "第一章：梦醒时分",
-        bg: "image/name1.jpg",
+        bg: "image2/i19.jpg",
+        position: "center center",
+        mobilePosition: "58% center",
+        tone: "dream",
         subtitles: [
             { text: "清晨的阳光透过窗帘洒进来...", type: "narration" },
             { text: "我从睡梦中醒来，却有一种奇怪的感觉。", type: "inner" },
@@ -16,7 +19,10 @@ const scenes = [
     {
         id: 2,
         title: "第二章：初次交换",
-        bg: "image/name2.jpg",
+        bg: "image2/i1.jpg",
+        position: "center 42%",
+        mobilePosition: "center center",
+        tone: "playful",
         subtitles: [
             { text: "接下来的日子里，这种“梦”越来越频繁。", type: "narration" },
             { text: "每隔几天，我就会在“她的”身体里醒来。", type: "inner" },
@@ -29,7 +35,10 @@ const scenes = [
     {
         id: 3,
         title: "第三章：乡间生活",
-        bg: "image/name3.jpg",
+        bg: "image2/i38.jpg",
+        position: "center center",
+        mobilePosition: "58% center",
+        tone: "pastoral",
         subtitles: [
             { text: "以三叶的身份生活，让我体验了完全不同的世界。", type: "narration" },
             { text: "清晨帮忙神社的工作，编织结绳...", type: "narration" },
@@ -42,7 +51,10 @@ const scenes = [
     {
         id: 4,
         title: "第四章：留言约定",
-        bg: "image/name4.jpg",
+        bg: "image2/i20.jpg",
+        position: "center 42%",
+        mobilePosition: "56% center",
+        tone: "warm",
         subtitles: [
             { text: "我们很快意识到，这不是普通的梦。", type: "narration" },
             { text: "于是我们开始用手机留言，记录彼此的生活。", type: "narration" },
@@ -55,7 +67,10 @@ const scenes = [
     {
         id: 5,
         title: "第五章：东京向往",
-        bg: "image/c2.jpg",
+        bg: "image2/i33.jpg",
+        position: "center center",
+        mobilePosition: "60% center",
+        tone: "city",
         subtitles: [
             { text: "当三叶进入我的身体时，她终于能体验向往已久的东京。", type: "narration" },
             { text: "咖啡馆、时装店、繁忙的街道...", type: "narration" },
@@ -69,6 +84,9 @@ const scenes = [
         id: 6,
         title: "第六章：约会计划",
         bg: "image/c5.jpg",
+        position: "center center",
+        mobilePosition: "54% center",
+        tone: "warm",
         subtitles: [
             { text: "我对打工前辈奥寺美纪一直有好感。", type: "inner" },
             { text: "三叶知道后，竟然主动帮我安排约会。", type: "narration" },
@@ -81,7 +99,10 @@ const scenes = [
     {
         id: 7,
         title: "第七章：彗星之日",
-        bg: "image/name5.jpg",
+        bg: "image2/i50.jpg",
+        position: "center center",
+        mobilePosition: "66% center",
+        tone: "celestial",
         subtitles: [
             { text: "约会的那天，迪亚马特彗星即将划过天空。", type: "narration" },
             { text: "三叶留言说：约会结束后正好能看到彗星。", type: "narration" },
@@ -95,7 +116,10 @@ const scenes = [
     {
         id: 8,
         title: "第八章：失联谜团",
-        bg: "image2/i18.jpg",
+        bg: "image2/i46.jpg",
+        position: "center center",
+        mobilePosition: "center center",
+        tone: "lonely",
         subtitles: [
             { text: "几天过去了，三叶没有任何消息。", type: "narration" },
             { text: "手机上的留言也消失了...", type: "inner" },
@@ -108,7 +132,10 @@ const scenes = [
     {
         id: 9,
         title: "第九章：飞驒之旅",
-        bg: "image2/i30.jpg",
+        bg: "image2/i4.jpg",
+        position: "center center",
+        mobilePosition: "52% center",
+        tone: "journey",
         subtitles: [
             { text: "我凭着记忆画下了糸守町的素描。", type: "narration" },
             { text: "和同学藤井司、前辈奥寺一起前往飞驒。", type: "narration" },
@@ -121,7 +148,10 @@ const scenes = [
     {
         id: 10,
         title: "第十章：破碎真相",
-        bg: "image/name6.jpg",
+        bg: "image2/i45.jpg",
+        position: "center center",
+        mobilePosition: "center center",
+        tone: "disaster",
         subtitles: [
             { text: "拉面店老板带我来到了废弃的糸守町。", type: "narration" },
             { text: "眼前的景象让我震惊——", type: "inner" },
@@ -134,7 +164,10 @@ const scenes = [
     {
         id: 11,
         title: "第十一章：遗忘之痛",
-        bg: "image2/i33.jpg",
+        bg: "image2/i48.jpg",
+        position: "center center",
+        mobilePosition: "72% center",
+        tone: "lonely",
         subtitles: [
             { text: "我打开手机，三叶的留言一条条消失。", type: "narration" },
             { text: "我对她的记忆也在逐渐模糊...", type: "inner" },
@@ -147,7 +180,10 @@ const scenes = [
     {
         id: 12,
         title: "第十二章：神社之路",
-        bg: "image2/i38.jpg",
+        bg: "image2/i9.jpg",
+        position: "center center",
+        mobilePosition: "center center",
+        tone: "sacred",
         subtitles: [
             { text: "我记得三叶的外祖母说过——", type: "narration" },
             { text: "\"产灵可以连结人与时间。\"", type: "dialogue" },
@@ -160,7 +196,10 @@ const scenes = [
     {
         id: 13,
         title: "第十三章：口嚼酒",
-        bg: "image/name7.jpg",
+        bg: "image2/story/kuchikamizake.png",
+        position: "42% center",
+        mobilePosition: "42% center",
+        tone: "sacred",
         subtitles: [
             { text: "外祖母说：进入人体的事物可以与时间形成连结。", type: "narration" },
             { text: "我喝下了三年前三叶制作的口嚼酒...", type: "inner" },
@@ -174,7 +213,10 @@ const scenes = [
     {
         id: 14,
         title: "第十四章：再次交换",
-        bg: "image2/i41.jpg",
+        bg: "image2/i27.jpg",
+        position: "center center",
+        mobilePosition: "58% center",
+        tone: "urgent",
         subtitles: [
             { text: "这一次，我进入了彗星坠落前的三叶体内。", type: "narration" },
             { text: "秋日祭典即将举行，彗星将在当晚坠落。", type: "narration" },
@@ -187,7 +229,10 @@ const scenes = [
     {
         id: 15,
         title: "第十五章：黄昏之时",
-        bg: "image2/i45.jpg",
+        bg: "image2/i44.jpg",
+        position: "center center",
+        mobilePosition: "center center",
+        tone: "twilight",
         subtitles: [
             { text: "黄昏时分，我在御神体的山顶醒来。", type: "narration" },
             { text: "我发现自己又回到了泷的身体。", type: "inner" },
@@ -200,7 +245,10 @@ const scenes = [
     {
         id: 16,
         title: "第十六章：书写名字",
-        bg: "image2/i50.jpg",
+        bg: "image2/i15.jpg",
+        position: "center center",
+        mobilePosition: "center center",
+        tone: "twilight",
         subtitles: [
             { text: "我们短暂地交谈，彼此确认对方的存在。", type: "narration" },
             { text: "\"为了不再忘记，我们互相写下名字吧。\"", type: "dialogue" },
@@ -214,7 +262,10 @@ const scenes = [
     {
         id: 17,
         title: "第十七章：拯救小镇",
-        bg: "image2/i51.jpg",
+        bg: "image2/i49.jpg",
+        position: "center center",
+        mobilePosition: "center center",
+        tone: "disaster",
         subtitles: [
             { text: "恢复真身的三叶，继续执行避难计划。", type: "narration" },
             { text: "她说服父亲以\"演习\"名义疏散镇民。", type: "narration" },
@@ -227,7 +278,10 @@ const scenes = [
     {
         id: 18,
         title: "尾声：重逢",
-        bg: "image/name7.jpg",
+        bg: "image2/story/reunion.jpg",
+        position: "center center",
+        mobilePosition: "70% center",
+        tone: "reunion",
         subtitles: [
             { text: "五年后，我已经进入社会工作。", type: "narration" },
             { text: "那段记忆变得模糊，但我总是在寻找某人。", type: "inner" },
@@ -264,6 +318,68 @@ const progressFill = document.getElementById('progress-fill');
 const backBtn = document.getElementById('back-btn');
 const endScreen = document.getElementById('end-screen');
 const replayBtn = document.getElementById('replay-btn');
+const orientationGuard = document.getElementById('orientation-guard');
+const orientationStatus = document.getElementById('orientation-status');
+const landscapeBtn = document.getElementById('landscape-btn');
+
+const portraitPhoneQuery = window.matchMedia('(max-width: 768px) and (orientation: portrait)');
+
+function updateOrientationGuard() {
+    orientationGuard.setAttribute('aria-hidden', String(!portraitPhoneQuery.matches));
+
+    if (!portraitPhoneQuery.matches) {
+        orientationStatus.textContent = '画面、字幕与操作区域会在横屏下完整呈现。';
+        landscapeBtn.textContent = '尝试切换横屏';
+    }
+}
+
+async function requestLandscapeMode() {
+    orientationStatus.textContent = '正在尝试切换横屏…';
+    landscapeBtn.disabled = true;
+
+    try {
+        if (!document.fullscreenElement && document.documentElement.requestFullscreen) {
+            await document.documentElement.requestFullscreen({ navigationUI: 'hide' });
+        }
+    } catch (error) {
+        // iOS Safari 等浏览器可能不开放页面全屏，继续尝试方向锁定。
+    }
+
+    try {
+        if (screen.orientation && screen.orientation.lock) {
+            await screen.orientation.lock('landscape');
+        }
+    } catch (error) {
+        // 部分移动浏览器不允许网页锁定方向，保留手动旋转提示即可。
+    } finally {
+        setTimeout(() => {
+            landscapeBtn.disabled = false;
+            if (portraitPhoneQuery.matches) {
+                orientationStatus.textContent = '当前浏览器无法自动旋转，请手动将手机横过来。';
+                landscapeBtn.textContent = '再次尝试';
+            }
+        }, 350);
+    }
+}
+
+landscapeBtn.addEventListener('click', requestLandscapeMode);
+if (portraitPhoneQuery.addEventListener) {
+    portraitPhoneQuery.addEventListener('change', updateOrientationGuard);
+} else {
+    portraitPhoneQuery.addListener(updateOrientationGuard);
+}
+window.addEventListener('orientationchange', updateOrientationGuard);
+updateOrientationGuard();
+
+function preloadSceneImage(index) {
+    const scene = scenes[index];
+    if (!scene) return;
+
+    const image = new Image();
+    image.src = scene.bg;
+}
+
+preloadSceneImage(0);
 
 // 开始按钮事件
 startBtn.addEventListener('click', () => {
@@ -303,6 +419,7 @@ function loadScene(index) {
 
     isTransitioning = true;
     const scene = scenes[index];
+    preloadSceneImage(index + 1);
 
     // 淡出当前场景
     sceneBg.classList.add('fade-out');
@@ -311,6 +428,9 @@ function loadScene(index) {
     setTimeout(() => {
         // 切换背景和标题
         sceneBg.style.backgroundImage = `url('${scene.bg}')`;
+        sceneBg.style.setProperty('--scene-position', scene.position || 'center center');
+        sceneBg.style.setProperty('--scene-position-mobile', scene.mobilePosition || scene.position || 'center center');
+        sceneBg.dataset.tone = scene.tone || 'default';
         sceneTitle.textContent = scene.title;
 
         // 淡入新场景
