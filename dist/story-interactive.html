@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>你的名字 - 互动剧情</title>
+    <link rel="stylesheet" href="css/story-interactive.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- 开场界面 -->
+    <div id="intro-screen">
+        <h1>你的名字</h1>
+        <p class="intro-text">以泷的视角，重新体验这段跨越时空的故事</p>
+        <button id="start-btn">开始体验</button>
+    </div>
+
+    <!-- 主场景容器 -->
+    <div id="scene-container" class="hidden">
+        <!-- 场景背景 -->
+        <div id="scene-bg"></div>
+
+        <!-- 场景标题 -->
+        <div id="scene-title"></div>
+
+        <!-- 字幕区域 -->
+        <div id="subtitle-box">
+            <p id="subtitle-text"></p>
+            <button id="continue-btn">继续 ▶</button>
+        </div>
+
+        <!-- 进度指示器 -->
+        <div id="progress-container">
+            <span id="scene-indicator">1 / 18</span>
+            <div id="progress-bar">
+                <div id="progress-fill"></div>
+            </div>
+        </div>
+
+        <!-- 返回按钮 -->
+        <button id="back-btn" title="返回">✕</button>
+    </div>
+
+    <!-- 结束界面 -->
+    <div id="end-screen" class="hidden">
+        <h1>感谢体验</h1>
+        <p>「你的名字是？」</p>
+        <div class="end-buttons">
+            <button id="replay-btn">重新体验</button>
+            <a href="index.html" class="btn-link">返回首页</a>
+        </div>
+    </div>
+
+    <script src="js/story-interactive.js"></script>
+</body>
+</html>
